@@ -18,9 +18,7 @@ public class ReverseString {
         for (byte i = 0; i < temp.length; i++)
             result[i] = temp[temp.length - i - 1];
 
-        String string = new String(result);
-
-        System.out.println(string);
+        System.out.println(new String(result));
 
     }
 
