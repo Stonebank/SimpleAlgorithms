@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class SortNamesAlphabeticalOrder {
@@ -19,6 +20,7 @@ public class SortNamesAlphabeticalOrder {
         String[] names = nameArray.toArray(new String[0]);
         int n = names.length;
         String temp;
+        int operation = 0;
 
         for (int i = 0; i < n; i++) {
 
@@ -29,8 +31,10 @@ public class SortNamesAlphabeticalOrder {
                     names[i] = names[j];
                     names[j] = temp;
                 }
+                operation++;
 
             }
+            operation++;
 
         }
 
@@ -38,7 +42,7 @@ public class SortNamesAlphabeticalOrder {
         for (String name : names)
             System.out.println(name);
 
-        System.out.println("Sorted in: " + (System.currentTimeMillis() - startTime) + " ms");
+        System.out.println(operation + " operations performed in " + (System.currentTimeMillis() - startTime) + " ms.");
 
 
     }
