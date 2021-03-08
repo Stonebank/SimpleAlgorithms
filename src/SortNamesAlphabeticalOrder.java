@@ -30,6 +30,7 @@ public class SortNamesAlphabeticalOrder {
                     temp = names[i];
                     names[i] = names[j];
                     names[j] = temp;
+
                 }
                 operation++;
 
